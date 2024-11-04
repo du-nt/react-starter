@@ -29,6 +29,10 @@ export default function LoginPage() {
     formState: { errors },
   } = useForm<LoginFormValues>({
     resolver: zodResolver(LoginFormSchema),
+    defaultValues: {
+      username: "",
+      password: "",
+    },
   });
 
   const { isPending, mutate } = useMutation<
