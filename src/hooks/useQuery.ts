@@ -21,7 +21,7 @@ export function useQuery<
   options: UseQueryOptions<TQueryFnData, TError, TData, TQueryKey> & {
     config?: AxiosRequestConfig;
     onSuccess?: (data: TQueryFnData) => void;
-    onError?: (error: unknown) => void;
+    onError?: (error: TError) => void;
   },
   queryClient?: QueryClient
 ): UseQueryResult<TData, TError> {
